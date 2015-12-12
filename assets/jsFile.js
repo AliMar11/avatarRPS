@@ -94,7 +94,13 @@ function waterCode(randomSelection){
      // alert("You win! Time to celebrate with ginseng tea!")
     };
 
+  function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1); 
+  }
+
   function sendAlert(playerChoice, randomSelection, winLose, message){
+    playerChoice = capitalize(playerChoice);
+    randomSelection = capitalize(randomSelection);
     //swal("You chose " + playerChoice + " the computer chose " + randomSelection + "." + " " + message);
     var intro = "You chose " + playerChoice + " the computer chose " + randomSelection + ".";
     if (winLose === "win") {
